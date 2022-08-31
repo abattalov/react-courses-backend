@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
   def index
     @courses = Course.all
 
-    render json: @courses
+    render json: @courses, except: [:created_at, :updated_at]
   end
 
   # GET /courses/1
